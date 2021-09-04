@@ -8,25 +8,10 @@
 	-webkit-box-sizing: border-box;
 }
 
-:root {
-  --background: #0f0f11;
-  --textColor: #fff;
-  --lighterVariant: #8f9091;
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--background: #fcfcfc;
-		--textColor: #0f0f11;
-  	  }
-}
-
 body {
    /* font-family: "MyriadPro-Regular", "SF Pro Rounded", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; */
-   font-family: "MyriadPro-Regular";
+   font-family: "MyriadPro-Semibold", "Myriad Pro Regular", serif;
    font-size: 22px;
-   color: var(--textColor);
-   background: var(--background);
    padding: 5vh 0;
 }
 
