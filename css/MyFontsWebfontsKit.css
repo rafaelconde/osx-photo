@@ -20,16 +20,15 @@
  * © 2021 MyFonts Inc
 */
 
-
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3fb7d4");
+@import url("//hello.myfonts.net/count/3fb7d0");
   
 @font-face {
   font-family: "MyriadPro-Semibold";
-  src: url('./webFonts/MyriadProSemibold/font.woff2') format('woff2'), url('./webFonts/MyriadProSemibold/font.woff') format('woff');
-}
-@font-face {
-  font-family: "MyriadPro-Regular";
-  src: url('./webFonts/MyriadProRegular/font.woff2') format('woff2'), url('./webFonts/MyriadProRegular/font.woff') format('woff');
+  src: url('fonts/MyriadProSemibold/font.woff2') format('woff2'), url('fonts/MyriadProSemibold/font.woff') format('woff');
 }
 
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url('fonts/MyriadProRegular/font.woff2') format('woff2'), url('fonts/MyriadProRegular/font.woff') format('woff');
+}

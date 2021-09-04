@@ -1,4 +1,4 @@
-var video = document.getElementById('showroom-video');
+var video = document.getElementById('showcase-video');
 
 function toggleMute(){
   video.muted = !video.muted;
