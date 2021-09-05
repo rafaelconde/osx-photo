@@ -104,9 +104,9 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 95vw;
+	width: 96vw;
 	height: 80vh;
-	margin: 2.5vw auto;
+	margin: 2vw auto;
 	overflow: hidden;
 	border-radius: 48px;
 	-webkit-backface-visibility: hidden;
@@ -153,6 +153,12 @@ a {
 	font-size: 20px;
 	text-shadow: 0px 1px 2px #1B1B25;
 	box-shadow: inset 0 4px 5px rgba(255, 255, 255, 0.3), inset 0 -3px 8px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease-in-out;
+}
+
+.button-cta:hover {
+	background: linear-gradient(#2C638C, #4088C3);
+	box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.3), inset 0 -3px 8px rgba(255, 255, 255, 0.3);
 }
 
 .mute-switch {
@@ -185,43 +191,65 @@ a {
 .a-la-carte {
 	max-width: 1400px;
 	margin: 64px auto auto auto;
+	padding: 2vw;
 }
 
 .a-la-carte .row {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
 .a-la-carte .item {
 	text-align: center;
-	padding: 0 16px;
-	max-width: 350px;
+	padding: 0 8px;
+	max-width: 25%;
 	margin-bottom: 40px;
+}
+
+@media (max-width: 1160px) {
+	.a-la-carte .item {
+		max-width: 50%;
+	}	
+}
+
+@media (max-width: 560px) {
+	.a-la-carte .item {
+		max-width: 100%;
+	}	
 }
 
 .thumbnail {
 	border-radius: 20px;
-	border: 4px solid black;
+	border: 8px solid black;
 	min-width: 240px;
 	width: 100%;
+	background: black;
 }
 
 .download-options {
 	display: flex;
-	justify-content: space-around;
+	justify-content: stretch;
+	align-items: stretch;
 }
 
 .download-options a {
 	display: flex;
 	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+	align-items: center;
 	font-size: 16px;
 	text-align: center;
 	text-decoration: none;
 	color: inherit;
-	padding: 4px 8px;
+	padding: 4px 8px 8px 8px;
 	border-radius: 8px;
 	background: rgba(255,255,255,0.05);
+}
+
+.download-options a:nth-child(2) {
+	margin: auto 8px;
 }
 
 .download-options a:hover {
@@ -306,7 +334,8 @@ a {
 }
 
 .file-size {
-	font-size: 14px;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	font-size: 12px;
 	opacity: 0.5;
 }
 
@@ -344,7 +373,8 @@ a {
 	align-items: center;
 	text-decoration: none;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-	font-size: 22px;
+	font-size: 20px;
+	font-weight: 500;
 	margin-bottom: 40px;
 }
 
@@ -357,6 +387,24 @@ a {
 	font-size: 14px;
 	font-weight: 300;
 	text-align: center;
-	opacity: .5;
+	opacity: .6;
 	margin-bottom: 40px;
+}
+
+// Preload images to avoid a flash on hover
+body::after{
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; // hide images
+   content:
+    	url("../assets/icon_6k_leo.png")
+		url("../assets/icon_6k_snow.png")
+		url("../assets/icon_6k_lion.png")
+		url("../assets/icon_6k_mountain.png")
+		url("../assets/icon_ipad_leo.png")
+		url("../assets/icon_ipad_snow.png")
+		url("../assets/icon_ipad_lion.png")
+		url("../assets/icon_ipad_mountain.png")
+		url("../assets/icon_iphone_leo.png")
+		url("../assets/icon_iphone_snow.png")
+		url("../assets/icon_iphone_lion.png")
+		url("../assets/icon_iphone_mountain.png");
 }
