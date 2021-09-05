@@ -28,9 +28,17 @@ body {
    background: var(--background);
 }
 
+.section p,
+.footer {
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	font-size: 20px;
+	opacity: 0.9;
+	line-height: 26px;
+}
+
 h1, h2 {
 	/* background: linear-gradient(#818088 18.07%, #0b0c0d); */
-	background: linear-gradient(#fff 50%, #8c8c8c);
+	background: linear-gradient(#fff 33%, #8c8c8c);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	filter: drop-shadow(0px 2px 4px rgba(0,0,0,.5));
@@ -47,8 +55,22 @@ h2 {
 	font-size: 5vw;
 }
 
+h3 {
+	margin: 4px;
+}
+
+h4 {
+	font-size: 32px;
+	margin: 0;
+	text-align: center;
+}
+
 p {
 	margin: 16px;
+}
+
+a {
+	color: inherit;
 }
 
 .badge {
@@ -90,21 +112,15 @@ p {
 
 .showroom {
 	position: absolute;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	object-fit: fill;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	z-index: 1;
 }
 
 .poster, video {
-	object-fit: fill;
-	margin: 0;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 }
 
@@ -119,7 +135,7 @@ p {
 	margin-top: 16px;
 	font-size: 20px;
 	text-shadow: 0px 1px 2px #1B1B25;
-	box-shadow: inset 0 4px 5px rgba(255, 255, 255, 0.3), inset 0 -3px 8px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 4px 5px rgba(255, 255, 255, 0.3), inset 0 -3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .mute-switch {
@@ -159,10 +175,17 @@ p {
 	justify-content: space-around;
 }
 
-.a-la-carte img {
-	border-radius: 16px;
+.a-la-carte .item {
+	text-align: center;
+	padding: 0 16px;
+}
+
+
+.thumbnail {
+	border-radius: 20px;
 	border: 4px solid black;
-	width: 240px;
+	min-width: 240px;
+	width: 100%;
 }
 
 .download-options {
@@ -182,7 +205,127 @@ p {
 	background: rgba(255,255,255,0.05);
 }
 
+.download-options a:hover {
+	background: rgba(255,255,255,0.1);
+}
+
+.download-options .device-icon {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-size: 100% 100%;
+}
+
+.download-options a:nth-child(1) .device-icon {
+	background-image: url("../assets/icon_6k_off.png");
+}
+
+.download-options a:nth-child(2) .device-icon {
+	background-image: url("../assets/icon_ipad_off.png");
+}
+
+.download-options a:nth-child(3) .device-icon {
+	background-image: url("../assets/icon_iphone_off.png");
+}
+
+.item:nth-child(1) a:nth-child(1):hover .device-icon {
+	background-image: url("../assets/icon_6k_leo.png");
+}
+
+.item:nth-child(1) a:nth-child(2):hover .device-icon {
+	background-image: url("../assets/icon_ipad_leo.png");
+}
+
+.item:nth-child(1) a:nth-child(3):hover .device-icon {
+	background-image: url("../assets/icon_iphone_leo.png");
+}
+
+.item:nth-child(2) a:nth-child(1):hover .device-icon {
+	background-image: url("../assets/icon_6k_snow.png");
+}
+
+.item:nth-child(2) a:nth-child(2):hover .device-icon {
+	background-image: url("../assets/icon_ipad_snow.png");
+}
+
+.item:nth-child(2) a:nth-child(3):hover .device-icon {
+	background-image: url("../assets/icon_iphone_snow.png");
+}
+
+.item:nth-child(3) a:nth-child(1):hover .device-icon {
+	background-image: url("../assets/icon_6k_lion.png");
+}
+
+.item:nth-child(3) a:nth-child(2):hover .device-icon {
+	background-image: url("../assets/icon_ipad_lion.png");
+}
+
+.item:nth-child(3) a:nth-child(3):hover .device-icon {
+	background-image: url("../assets/icon_iphone_lion.png");
+}
+
+.item:nth-child(4) a:nth-child(1):hover .device-icon {
+	background-image: url("../assets/icon_6k_mountain.png");
+}
+
+.item:nth-child(4) a:nth-child(2):hover .device-icon {
+	background-image: url("../assets/icon_ipad_mountain.png");
+}
+
+.item:nth-child(4) a:nth-child(3):hover .device-icon {
+	background-image: url("../assets/icon_iphone_mountain.png");
+}
+
 .file-size {
 	font-size: 14px;
 	opacity: 0.5;
+}
+
+.section, 
+.footer {
+	width: 100%;
+	max-width: 600px;
+	padding: 16px;
+	text-align: justify;
+	margin: 104px auto;	
+}
+
+.center-wrapper {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+.shameful-self-promotion {
+	text-align: center;	
+}
+.shameful-self-promotion .row {
+	display: flex;
+	justify-content: space-around;
+	flex-basis: 1;
+	margin-top: 40px;
+}
+
+.shameful-self-promotion .row a {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	font-size: 22px;
+}
+
+.shameful-self-promotion img {
+	width: 64px;
+	margin: 8px;
+}
+
+.footer {
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	opacity: .5;
+	margin-bottom: 40px;
 }
