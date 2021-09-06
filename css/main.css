@@ -11,14 +11,13 @@
 :root {
   --background: #000;
   --textColor: #fff;
-  --lighterVariant: #8f9091;
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
 		--background: #fcfcfc;
 		--textColor: #0f0f11;
-		}
+	}
 }
 
 body {
@@ -192,6 +191,17 @@ a {
 	max-width: 1400px;
 	margin: 64px auto auto auto;
 	padding: 2vw;
+}
+
+/* Preload images to avoid a flash on hover */
+.a-la-carte:after {
+	content: url("../assets/icon_6k_leo.png") url("../assets/icon_6k_snow.png") url("../assets/icon_6k_lion.png") url("../assets/icon_6k_mountain.png") url("../assets/icon_ipad_leo.png") url("../assets/icon_ipad_snow.png") url("../assets/icon_ipad_lion.png") url("../assets/icon_ipad_mountain.png") url("../assets/icon_iphone_leo.png") url("../assets/icon_iphone_snow.png") url("../assets/icon_iphone_lion.png") url("../assets/icon_iphone_mountain.png");
+	display: block;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+	overflow: hidden;
+	z-index: -1;
 }
 
 .a-la-carte .row {
@@ -389,22 +399,4 @@ a {
 	text-align: center;
 	opacity: .6;
 	margin-bottom: 40px;
-}
-
-// Preload images to avoid a flash on hover
-body::after{
-   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; // hide images
-   content:
-    	url("../assets/icon_6k_leo.png")
-		url("../assets/icon_6k_snow.png")
-		url("../assets/icon_6k_lion.png")
-		url("../assets/icon_6k_mountain.png")
-		url("../assets/icon_ipad_leo.png")
-		url("../assets/icon_ipad_snow.png")
-		url("../assets/icon_ipad_lion.png")
-		url("../assets/icon_ipad_mountain.png")
-		url("../assets/icon_iphone_leo.png")
-		url("../assets/icon_iphone_snow.png")
-		url("../assets/icon_iphone_lion.png")
-		url("../assets/icon_iphone_mountain.png");
 }
